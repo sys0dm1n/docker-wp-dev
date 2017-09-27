@@ -43,11 +43,9 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 RUN pecl install xdebug-2.5.0 \
     && docker-php-ext-enable xdebug
 
-# Install intl
+# Install intl     #php7.0-intl
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y libicu-dev \
-    && pecl install intl \
-    && docker-php-ext-install -j$(nproc) intl \
-    && docker-php-ext-install intl
+    && docker-php-ext-install -j$(nproc) intl
 
 # Configure timezone and locale
 RUN echo "Europe/Paris" > /etc/timezone && \
@@ -111,8 +109,8 @@ RUN cd /tmp && \
     echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
 RUN gem install bundler rails
-RUN gem install guard guard-sass guard-process sass juicer
-RUN juicer install yui_compressor
+RUN gem install guard guard-sass guard-process sass juicer yui-compressor
+#RUN juicer install yui_compressor
 
 # Clean up APT and temporary files when done
 RUN apt-get clean -qq && \
