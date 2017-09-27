@@ -1,0 +1,75 @@
+version: '2'
+
+services:
+# Ref.: https://hub.docker.com/_/mysql/
+  wamp7-mysql:
+    container_name: wamp-mysql5.7
+#This will result in an image named lamp and tagged tag
+    image: mysql:5.7
+#Expose ports. Either specify both ports (HOST:CONTAINER), or just the container port (a random host port will be chosen).
+    ports:
+      - "4407:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=wordpress
+      - MYSQL_USER=wordpress
+      - MYSQL_PASSWORD=wordpress
+    volumes:
+      - ./mysql:/var/lib/mysql
+      - ./mysqld:/run/mysqld
+
+  wamp7-php:
+# Ref.: https://hub.docker.com/_/php/
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: wamp-php
+    image: php:php7-apache
+    ports:
+      - "8000:80"
+    # environment:
+    #   - GUARD_DIR=/var/www/html/wp-content/themes/museeum
+    volumes:
+      - ./wordpress:/var/www/html
+    depends_on:
+      - wamp7-mysql
+
+#/wordpress
+# mkdir -p wordpress mysql/data mysqld/
+# docker-compose up -d
+# docker exec -it mywordpress_myserver_1 bash
+# docker logs --tail 50 --follow --timestamps mywordpress_myserver_1
+# docker-compose build
+# docker-compose stop
+# docker-compose rm
+# docker ps -a
+# docker-compose ps
+# docker images
+# docker rmi "image ID"
+# docker-compose run --rm -w /var/www/html/wp-content/themes/museeum wamp-php guard
+
+# docker logs -f your_php_apache_container
+# docker logs -f your_php_apache_container >/dev/null   ## only the error log
+# docker logs -f your_php_apache_container 2>/dev/null  ## only the access log
+
+# docker login
+# docker commit -m "My Message" <CONTAINER_ID> keeward/p7ag:latest
+# docker commit -m "My Message" <CONTAINER_ID> keeward/p7ag:1.0.3
+# docker push keeward/p7ag
+
+
+# docker-compose stop
+# docker-compose rm
+# docker-compose build
+# docker-compose up -d
+# docker ps -a
+# docker login
+#  docker commit <CONTAINER ID> keeward/p7ag:1.3.0
+#  docker commit <CONTAINER ID> keeward/p7ag:latest
+#  docker push keeward/p7ag
+#
+# Update images:
+# docker pull keeward/p7ag
+# docker-compose stop
+# docker-compose rm
+# docker-compose up -d
