@@ -46,7 +46,7 @@ RUN pecl install xdebug-2.5.0 \
 # Install intl
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y libicu-dev \
     && pecl install intl \
-    $$ docker-php-ext-install -j$(nproc) intl \
+    && docker-php-ext-install -j$(nproc) intl \
     && docker-php-ext-install intl
 
 # Configure timezone and locale
