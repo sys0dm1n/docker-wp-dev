@@ -1,82 +1,88 @@
-actioncable (5.0.1)
-actionmailer (5.0.1)
-actionpack (5.0.1)
-actionview (5.0.1)
-activejob (5.0.1)
-activemodel (5.0.1)
-activerecord (5.0.1)
-activesupport (5.0.1)
-arel (7.1.4)
-bigdecimal (default: 1.3.0)
-builder (3.2.2)
-bundle (0.0.1)
-bundler (1.13.7)
-cmdparse (2.0.6)
-coderay (1.1.1)
-commonjs (0.2.7)
-compressor (0.0.4)
-concurrent-ruby (1.0.4)
-did_you_mean (1.1.0)
-erubis (2.7.0)
-ffi (1.9.14)
-formatador (0.2.5)
-globalid (0.3.7)
-guard (2.14.0)
-guard-compat (1.2.1)
-guard-process (1.2.1)
-guard-sass (1.6.1)
-i18n (0.7.0)
-io-console (default: 0.4.6)
-json (default: 2.0.2)
-juicer (1.2.0)
-less (2.6.0)
-listen (3.1.5)
-loofah (2.0.3)
-lumberjack (1.0.11, 1.0.10)
-mail (2.6.4)
-method_source (0.8.2)
-mime-types (3.1)
-mime-types-data (3.2016.0521)
-mini_portile2 (2.1.0)
-minitest (5.10.1)
-nenv (0.3.0)
-net-telnet (0.1.1)
-nio4r (1.2.1)
-nokogiri (1.7.0.1)
-notiffany (0.1.1)
-openssl (default: 2.0.2)
-power_assert (0.4.1)
-process (0.0.1)
-pry (0.10.4)
-psych (default: 2.2.2)
-rack (2.0.1, 1.6.5)
-rack-protection (1.5.3)
-rack-test (0.6.3)
-rails (5.0.1)
-rails-dom-testing (2.0.2)
-rails-html-sanitizer (1.0.3)
-railties (5.0.1)
-rake (12.0.0)
-rb-fsevent (0.9.8)
-rb-inotify (0.9.7)
-rdoc (default: 5.0.0)
-redis (3.3.2)
-ruby_dep (1.5.0)
-rubyzip (0.9.9)
-sass (3.4.23)
-shellany (0.0.1)
-simple-random (1.0.3)
-sinatra (1.4.7)
-slop (3.6.0)
-split (2.2.0)
-spoon (0.0.6)
-sprockets (3.7.1)
-sprockets-rails (3.2.0)
-test-unit (3.2.3)
-thor (0.19.4)
-thread_safe (0.3.5)
-tilt (2.0.5)
-tzinfo (1.2.2)
-websocket-driver (0.6.4)
-websocket-extensions (0.1.2)
-xmlrpc (0.2.1)
+source 'https://rubygems.org'
+ruby '2.3.3'
+
+gem 'rails', '~> 5.0.1'
+
+group :default do
+  gem 'actioncable'
+  gem 'actionmailer'
+  gem 'actionpack'
+  gem 'actionview'
+  gem 'activejob'
+  gem 'activemodel'
+  gem 'activerecord'
+  gem 'activesupport'
+  gem 'arel'
+  gem 'bigdecimal'
+  gem 'builder'
+  gem 'bundle'
+  gem 'bundler'
+  gem 'cmdparse'
+  gem 'coderay'
+  gem 'commonjs'
+  gem 'compressor'
+  gem 'concurrent-ruby'
+  gem 'did_you_mean'
+  gem 'erubis'
+  gem 'ffi'
+  gem 'formatador'
+  gem 'globalid'
+  gem 'guard'
+  gem 'guard-compat'
+  gem 'guard-process'
+  gem 'guard-sass'
+  gem 'i18n'
+  gem 'io-console'
+  gem 'json'
+  gem 'juicer'
+  gem 'less'
+  gem 'listen'
+  gem 'loofah'
+  gem 'lumberjack'
+  gem 'mail'
+  gem 'method_source'
+  gem 'mime-typ'
+  gem 'mime-types-data'
+  gem 'mini_portile2'
+  gem 'minitest'
+  gem 'nenv'
+  gem 'net-telnet'
+  gem 'nio4r'
+  gem 'nokogiri'
+  gem 'notiffany'
+  gem 'openssl'
+  gem 'power_assert'
+  gem 'process'
+  gem 'pry '
+  gem 'psych'
+  gem 'rack'
+  gem 'rack-protection'
+  gem 'rack-test'
+  gem 'rails-dom-testing'
+  gem 'rails-html-sanitizer'
+  gem 'railties'
+  gem 'rake'
+  gem 'rb-fsevent'
+  gem 'rb-inotify'
+  gem 'rdoc'
+  gem 'redis'
+  gem 'ruby_dep'
+  gem 'rubyzip'
+  gem 'sass '
+  gem 'shellany'
+  gem 'simple-random'
+  gem 'sinatra'
+  gem 'slop'
+  gem 'split'
+  gem 'spoon'
+  gem 'sprockets'
+  gem 'sprockets-rails'
+  gem 'test-unit'
+  gem 'thor'
+  gem 'thread_safe'
+  gem 'tilt'
+  gem 'tzinfo'
+  gem 'websocket-driver'
+  gem 'websocket-extensions'
+  gem 'xmlrpc'
+end
