@@ -25,7 +25,8 @@ RUN a2enmod rewrite headers
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y update \
     && DEBIAN_FRONTEND=noninteractive apt-get -y install bash-completion
 
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+# Install dependencies
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y -qq\
         curl \
         git \
         libpng12-dev \
@@ -34,10 +35,27 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
         wget \
         zlib1g-dev \
         locales \
+        build-essential \
+        ca-certificates \
+        libcurl4-openssl-dev \
+        libffi-dev \
+        libgdbm-dev \
+        libpq-dev \
+        libreadline6-dev \
+        libssl-dev \
+        libtool \
+        libxml2-dev \
+        libxslt-dev \
+        libyaml-dev \
+        software-properties-common \
+        wget \
+        zlib1g-dev \
+        yui-compressor \
     && rm -rf /var/lib/apt/lists/* \
     && docker-php-ext-install -j$(nproc) iconv mcrypt \
     && docker-php-ext-configure gd --with-png-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install -j$(nproc) gd mysqli mbstring zip
+
 
 #Install and enable xdebug
 RUN pecl install xdebug-2.5.0 \
@@ -62,26 +80,6 @@ COPY php.ini /usr/local/etc/php/conf.d/
 RUN ln -s /etc/apache2/sites-available/website.conf /etc/apache2/sites-enabled/
 RUN rm /etc/apache2/sites-enabled/000-default.conf
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
-
-# Install build dependencies
-RUN apt-get update -qq && \
-    apt-get install -y -qq \
-      build-essential \
-      ca-certificates \
-      curl \
-      libcurl4-openssl-dev \
-      libffi-dev \
-      libgdbm-dev \
-      libpq-dev \
-      libreadline6-dev \
-      libssl-dev \
-      libtool \
-      libxml2-dev \
-      libxslt-dev \
-      libyaml-dev \
-      software-properties-common \
-      wget \
-      zlib1g-dev
 
 # Install Ruby.
 # Install MRI Ruby 2.3.3
@@ -111,7 +109,7 @@ RUN cd /tmp && \
 RUN gem cleanup cmdparse
 RUN gem install cmdparse -v 2.0.6
 RUN gem install bundler rails
-RUN gem install guard guard-sass guard-process sass juicer yui-compressor
+RUN gem install guard guard-sass guard-process sass juicer
 #RUN juicer install yui_compressor
 
 # Clean up APT and temporary files when done
