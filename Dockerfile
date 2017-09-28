@@ -107,9 +107,11 @@ RUN cd /tmp && \
     echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
 RUN gem cleanup cmdparse
-RUN gem install cmdparse -v 2.0.6
-RUN gem install bundler rails
-RUN gem install guard guard-sass guard-process sass juicer
+COPY Gemfile /tmp/
+RUN cd /tmp/ && bundle install
+#RUN gem install cmdparse -v 2.0.6
+#RUN gem install bundler rails
+#RUN gem install guard guard-sass guard-process sass juicer
 #RUN juicer install yui_compressor
 
 # Clean up APT and temporary files when done
