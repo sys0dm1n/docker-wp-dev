@@ -41,7 +41,7 @@ group :default do
   gem 'lumberjack'
   gem 'mail'
   gem 'method_source'
-  gem 'mime-typ'
+  gem 'mime-types'
   gem 'mime-types-data'
   gem 'mini_portile2'
   gem 'minitest'
