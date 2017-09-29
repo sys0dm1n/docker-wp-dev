@@ -4,85 +4,85 @@ ruby '2.3.3'
 gem 'rails', '~> 5.0.1'
 
 group :default do
-  gem 'actioncable'
-  gem 'actionmailer'
-  gem 'actionpack'
-  gem 'actionview'
-  gem 'activejob'
-  gem 'activemodel'
-  gem 'activerecord'
-  gem 'activesupport'
-  gem 'arel'
-  gem 'bigdecimal'
-  gem 'builder'
-  gem 'bundle'
-  gem 'bundler'
-  gem 'cmdparse'
-  gem 'coderay'
-  gem 'commonjs'
-  gem 'compressor'
-  gem 'concurrent-ruby'
-  gem 'did_you_mean'
-  gem 'erubis'
-  gem 'ffi'
-  gem 'formatador'
-  gem 'globalid'
-  gem 'guard'
-  gem 'guard-compat'
-  gem 'guard-process'
-  gem 'guard-sass'
-  gem 'i18n'
-  gem 'io-console'
-  gem 'json'
-  gem 'juicer'
-  gem 'less'
-  gem 'listen'
-  gem 'loofah'
-  gem 'lumberjack'
-  gem 'mail'
-  gem 'method_source'
-  gem 'mime-types'
-  gem 'mime-types-data'
-  gem 'mini_portile2'
-  gem 'minitest'
-  gem 'nenv'
-  gem 'net-telnet'
-  gem 'nio4r'
-  gem 'nokogiri'
-  gem 'notiffany'
-  gem 'openssl'
-  gem 'power_assert'
-  gem 'process'
-  gem 'pry'
-  gem 'psych'
+  gem 'actioncable', "~> 5.0.1"
+  gem 'actionmailer', "~> 5.0.1"
+  gem 'actionpack', "~> 5.0.1"
+  gem 'actionview', "~> 5.0.1"
+  gem 'activejob', "~> 5.0.1"
+  gem 'activemodel', "~> 5.0.1"
+  gem 'activerecord', "~> 5.0.1"
+  gem 'activesupport', "~> 5.0.1"
+  gem 'arel', "~> 7.1.4"
+  gem 'bigdecimal', "~> 1.3.0"
+  gem 'builder', "~> 3.2.2"
+  gem 'bundle', "0.0.1"
+  gem 'bundler', "~> 1.13.7"
+  gem 'cmdparse', "~> 2.0.6"
+  gem 'coderay', "~> 1.1.1"
+  gem 'commonjs', "~> 0.2.7"
+  gem 'compressor', "~> 0.0.4"
+  gem 'concurrent-ruby', "~> 1.0.4"
+  gem 'did_you_mean', "~> 1.1.0"
+  gem 'erubis', "~> 2.7.0"
+  gem 'ffi', "~> 1.9.14"
+  gem 'formatador', "~> 0.2.5"
+  gem 'globalid', "~> 0.3.7"
+  gem 'guard', "~> 2.14.0"
+  gem 'guard-compat', "~> 1.2.1"
+  gem 'guard-process', "~> 1.2.1"
+  gem 'guard-sass', "~> 1.6.1"
+  gem 'i18n', "~> 0.7.0"
+  gem 'io-console', "~> 0.4.6"
+  gem 'json', "~> 2.0.2"
+  gem 'juicer', "~> 1.2.0"
+  gem 'less', "~> 2.6.0"
+  gem 'listen', "~> 3.1.5"
+  gem 'loofah', "~> 2.0.3"
+  gem 'lumberjack', "~> 1.0.10"
+  gem 'mail', "~> 2.6.4"
+  gem 'method_source', "~> 0.8.2"
+  gem 'mime-types', "3.1"
+  gem 'mime-types-data', "~> 3.2016.0521"
+  gem 'mini_portile2', "~> 2.1.0"
+  gem 'minitest', "~> 5.10.1"
+  gem 'nenv', "~> 0.3.0"
+  gem 'net-telnet', "~> 0.1.1"
+  gem 'nio4r', "~> 1.2.1"
+  gem 'nokogiri', "~> 1.7.0.1"
+  gem 'notiffany', "~> 0.1.1"
+  gem 'openssl', "~> 2.0.2"
+  gem 'power_assert', "~> 0.4.1"
+  gem 'process', "0.0.1"
+  gem 'pry', "~> 0.10.4"
+  gem 'psych', "~> 2.2.2"
   gem 'rack'
-  gem 'rack-protection'
-  gem 'rack-test'
-  gem 'rails-dom-testing'
-  gem 'rails-html-sanitizer'
-  gem 'railties'
-  gem 'rake'
-  gem 'rb-fsevent'
-  gem 'rb-inotify'
-  gem 'rdoc'
-  gem 'redis'
-  gem 'ruby_dep'
-  gem 'rubyzip'
-  gem 'sass'
-  gem 'shellany'
-  gem 'simple-random'
-  gem 'sinatra'
-  gem 'slop'
-  gem 'split'
-  gem 'spoon'
-  gem 'sprockets'
-  gem 'sprockets-rails'
-  gem 'test-unit'
-  gem 'thor'
-  gem 'thread_safe'
-  gem 'tilt'
-  gem 'tzinfo'
-  gem 'websocket-driver'
-  gem 'websocket-extensions'
-  gem 'xmlrpc'
+  gem 'rack-protection', "~> 1.5.3"
+  gem 'rack-test', "~> 0.6.3"
+  gem 'rails-dom-testing', "~> 2.0.2"
+  gem 'rails-html-sanitizer', "~> 1.0.3"
+  gem 'railties', "~> 5.0.1"
+  gem 'rake', "~> 12.0.0"
+  gem 'rb-fsevent', "~> 0.9.8"
+  gem 'rb-inotify', "~> 0.9.7"
+  gem 'rdoc', "~> 5.0.0"
+  gem 'redis', "~> 3.3.2"
+  gem 'ruby_dep', "~> 1.5.0"
+  gem 'rubyzip', "~> 0.9.9"
+  gem 'sass', "~> 3.4.23"
+  gem 'shellany', "0.0.1"
+  gem 'simple-random', "~> 1.0.3"
+  gem 'sinatra', "~> 1.4.7"
+  gem 'slop', "~> 3.6.0"
+  gem 'split', "~> 2.2.0"
+  gem 'spoon', "~> 0.0.6"
+  gem 'sprockets', "~> 3.7.1"
+  gem 'sprockets-rails', "~> 3.2.0"
+  gem 'test-unit', "~> 3.2.3"
+  gem 'thor', "~> 0.19.4"
+  gem 'thread_safe', "~> 0.3.5"
+  gem 'tilt', "~> 2.0.5"
+  gem 'tzinfo', "~> 1.2.2"
+  gem 'websocket-driver', "~> 0.6.4"
+  gem 'websocket-extensions', "~> 0.1.2"
+  gem 'xmlrpc', "~> 0.2.1"
 end
