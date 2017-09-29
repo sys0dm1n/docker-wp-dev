@@ -16,7 +16,7 @@ group :default do
   gem 'bigdecimal', "~> 1.3.0"
   gem 'builder', "~> 3.2.2"
   gem 'bundle', "0.0.1"
-  gem 'bundler', "~> 1.13.7"
+  gem 'bundler'
   gem 'cmdparse', "~> 2.0.6"
   gem 'coderay', "~> 1.1.1"
   gem 'commonjs', "~> 0.2.7"
